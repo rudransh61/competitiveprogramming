@@ -19,10 +19,26 @@ void permute(string a, int l, int r)
     }
 }
 
+
+//other
+void subs(string s, string ans=""){
+    if(s.length()==0){
+        cout<<ans<<endl;
+        return;
+    }
+    char ch = s[0];
+    string ros = s.substr(1);
+    subs(ros,ans);
+    subs(ros,ans+ch);
+}
+
+
 int main()
 {
     string str = "ABC";
     int n = str.size();
     permute(str, 0, n - 1);
+    cout<<endl<<endl<<endl<<"second"<<endl<<endl<<endl;
+    subs(str,"");
     return 0;
 }
