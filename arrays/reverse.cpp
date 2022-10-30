@@ -1,28 +1,41 @@
 #include <iostream>
 using namespace std;
 
-int main()
+void reverse(int arr[], int n)
 {
-    int arr[50], num, temp, i, j;
-    cout << " Please, enter the total no. you want to enter: ";
-    cin >> num;
 
-    for (i = 0; i < num; i++)
-    {
-        cout << " Enter the element " << i + 1 << ": ";
-        cin >> arr[i];
-    }
+    int start = 0;
+    int end = n - 1;
 
-    for (i = 0, j = num - 1; i < num / 2; i++, j--)
+    while (start <= end)
     {
-        temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+        swap(arr[start], arr[end]);
+        start++;
+        end--;
     }
-    cout << "\n Reverse all elements of the array: " << endl;
-    for (i = 0; i < num; i++)
+}
+
+void printArray(int arr[], int n)
+{
+
+    for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
     }
+    cout << endl;
+}
+
+int main()
+{
+
+    int arr[6] = {1, 4, 0, 5, -2, 15};
+    int brr[5] = {2, 6, 3, 9, 4};
+
+    reverse(arr, 6);
+    reverse(brr, 5);
+
+    printArray(arr, 6);
+    printArray(brr, 5);
+
     return 0;
 }

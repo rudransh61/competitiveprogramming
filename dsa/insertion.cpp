@@ -1,36 +1,26 @@
-#include <bits/stdc++.h>
+#include <vector>
 using namespace std;
-
-int insertSorted(int arr[], int n, int key, int capacity)
+vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, int m)
 {
-    if (n >= capacity)
-        return n;
+    int i = 0, j = 0;
+    vector<int> ans;
+    while (i < n && j < m)
+    {
 
-    int i;
-    for (i = n - 1; (i >= 0 && arr[i] > key); i--)
-        arr[i + 1] = arr[i];
-
-    arr[i + 1] = key;
-
-    return (n + 1);
-}
-
-int main()
-{
-    int arr[20] = {0,1,2,3,4,6,7,8,9,10,11,12};
-    int capacity = sizeof(arr) / sizeof(arr[0]);
-    int n = 12;
-    int i, key =5;
-
-    cout << "\nBefore Insertion: ";
-    for (i = 0; i < n; i++)
-        cout << arr[i] << " ";
-
-    n = insertSorted(arr, n, key, capacity);
-
-    cout << "\nAfter Insertion: ";
-    for (i = 0; i < n; i++)
-        cout << arr[i] << " ";
-
-    return 0;
+        if (arr1[i] == arr2[j])
+        {
+            ans.push_back(arr1[i]);
+            i++;
+            j++;
+        }
+        else if (arr1[i] < arr2[j])
+        {
+            i++;
+        }
+        else
+        {
+            j++;
+        }
+    }
+    return ans;
 }
