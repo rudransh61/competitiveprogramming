@@ -1,39 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
-int frequency(int arr[], int size)
+
+void countFreq(int arr[], int n)
 {
-    bool check[size];
-    for (int i = 0; i < size; i++)
-    {
-        check[i] = 0;
-    }
-    for (int i = 0; i < size; i++)
-    {
-        if (check[i] == 1)
-        {
-            continue;
-        }
-        int count = 1;
-        for (int j = i + 1; j < size; j++)
-        {
-            if (arr[i] == arr[j])
-            {
-                check[j] = 1;
-                count++;
-            }
-        }
-        cout << "frequency of " << arr[i] << " is: " << count << endl;
-    }
+    unordered_map<int, int> mp;
+
+    // count frequencies
+    for (int i = 0; i < n; i++)
+        mp[arr[i]]++;
+
+    for (auto x : mp)
+        cout << x.first << " " << x.second << endl;
 }
+
 int main()
 {
-    int n;
-    cin >> n;
-    int arr[n];
-    for(int i=0;i<n; i++){
-        cin>>arr[i];
-    }
-    int size = sizeof(arr) / sizeof(arr[0]);
-    frequency(arr, size);
+    int arr[] = {10, 20, 20, 10, 10, 20, 5, 20};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    countFreq(arr, n);
     return 0;
 }
