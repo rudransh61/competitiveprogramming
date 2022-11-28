@@ -23,3 +23,5 @@ int main() {
 
     return find_pivot(arr);
 }
+
+// p92
