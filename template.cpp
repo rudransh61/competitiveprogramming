@@ -14,7 +14,7 @@ using namespace std;
 #define sc set<char>
 
 /* FUNCTIONS */
-#define f(i,s,e) for(long long int i=s;i<e;i++)
+#define forl(i,s,e) for(long long int i=s;i<e;i++)
 
 /* UTILS */
 #define MOD 1000000007
