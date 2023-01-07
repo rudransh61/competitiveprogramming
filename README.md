@@ -1,8 +1,25 @@
-# competitiveprogramming
-This is all you need for your competitive programming journey (in progress), please help me to complete it and give me some ideas about more code. language C++.
 
-===================================================WELCOME==================================================
+# Competitive Programming sheet (for beginners)
 
-Please help me by contributing your efforts in this repository , it will help many beginners.
+This is all you need for your Competitive Programming journey
+or your interview preperation . It covers all projects, algos,questions , implementations
+and a special template for you . ( NOTE- This can be modified ).
 
-Thanks
+## Badges
+
+Add badges from somewhere like: [shields.io](https://shields.io/)
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
+
+
+# Hi, I'm Rudransh Bharwdaj! 👋
+
+## 🛠 Skills
+C,C++,Python,Java,Javascript,HTML,CSS,PHP,Flask,Bash,...
+
+
+## 🚀 About Me
+I'm a PHYSICS STUDENT , COMPETITIVE PROGRAMMER (codechef), WEB DEVELOPER (tool4u.netlify.app and texthelp.netlify.app and proprogrammer69.blogspot.com)
+
